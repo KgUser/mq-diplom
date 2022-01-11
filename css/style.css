@@ -1,69 +1,472 @@
-@media (max-width: 479px) {
-    .card {
-      width: 100%;
-    }
+/* =============== COMMON ==============*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
   
-  @media (min-width: 480px) {
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-    }
+  @font-face {
+    font-family: "Open Sans";
+    src: url('../fonts/OpenSans-Regular.woff');
+    font-style: normal;
+    font-weight: 400;
   }
   
-  @media (min-width: 480px) and (max-width: 640px) {
-    .card:nth-child(3n+3) {
-      width: 100%;
-    }
+  @font-face {
+    font-family: "Open Sans";
+    src: url('../fonts/OpenSans-Bold.woff');
+    font-style: bold;
+    font-weight: 700;
   }
   
-  @media (min-width: 480px) and (max-width: 960px) {
-    .card {
-      width: 50%;
-    }
+  body {
+    font-family: "Open Sans", sans-serif;
   }
   
-  @media (min-width: 641px) and (max-width: 960px) {
-    .card {
-      width: 33.33%;;
-    }
+  /* =============== HEADER ==============*/
+  .header {
+    background-image: url('../images/banner-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #000;
+    position: relative;
   
-    .card:nth-child(5n+1),
-    .card:nth-child(5n+2) {
-  
-      width: 50%;
-    }
+    padding-top: 30px;
+    padding-bottom: 147px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
-  @media (min-width: 961px) and (max-width: 1280px) {
-    .card {
-      width: 25%;
-    }
+  .header::after {
+    content: "";
+    background-color: #000000;
   
-    .card:nth-child(6n+5),
-    .card:nth-child(6n+6) {
-      width: 50%;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.6;
+  }
   
-    .card:nth-child(n+17) {
-      width: 25%;
-    }
+  .header-main-container {
+    position: relative;
+    z-index: 1;
+    width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  
+  .main-logo {
+    display: block;
+    width: 180px;
+  }
+  
+  .nav-list{
+    display: flex;
+    list-style-type: none;
+    color: white;
+  }
+  
+  .nav-list-item {
+    margin-left: 34px;
+  }
+  
+  .nav-list-link {
+    font-weight: regular;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+  }
+  
+  .header-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 45px;
+    color: #ffffff;
+    line-height: 1.65;
+  
+    text-align: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+  }
+  
+  .main-aside-container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 65px;
+    padding: 0 15px;
+  }
+  
+  /* =============== MAIN ==============*/
+  .main {
+    width: 780px;
+  }
+  
+  .article-container{
+    display: flex;
+    margin-top: 65px;
+  }
+  
+  .article-container:first-child{
+    margin-top: 0;
+  }
+  
+  .article-blocks {
+    margin-left: 30px;
+  }
+  
+  .article-head-list {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+  }
+  
+  .article-head-list-item{
+    margin-left: 20px;  
+  }
+  
+  .article-head-list-item:first-child{
+    margin-left: 0;
+  }
+  
+  .article-head-list-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #b59f5b;
+    font-size: 14px; 
+  }
+  
+  .article-head-list-link:hover {
+    color: orange;
+  }
+  
+  .article-heading {
+    margin-top: 14px;
+  }
+  
+  .article-heading-link{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    line-height: 1.2;
+  }
+  
+  .article-heading-link:hover {
+  color: #6e61ff;
+  }
+  
+  .time-heading {
+    display: flex;
+    margin-top: 35px;
   
   }
   
-  @media (min-width: 1281px) {
-    .card {
-      width: 20%;
-    }
-    
-    .card:nth-child(8n+6),
-    .card:nth-child(8n+7),
-    .card:nth-child(8n+8) {
-      
-      width: 33.33%;
-    }
-    
-    .card:nth-child(n+17) {
-      width: 25%;
-    }
+  .article-time {
+    font-weight: regular;
+    font-size: 12px;
   }
+  
+  .article-author {
+    font-size: 12px;
+    margin-left: 15px;
+    font-weight: bold;
+  
+    display: block;
+  }
+  
+  .article-text {
+    margin-top: 50px;
+  
+  }
+  
+  .article-text-post {
+    font-size: 15px;
+    line-height: 1.34;
+    color: black;
+  }
+  
+  .article-span{
+    display: block;
+    margin-top: 20px;
+  }
+  
+  /* =============== ASIDE ==============*/
+  .aside-container {
+    margin-left: 110px;
+    width: 275px;
+  }
+  
+  .aside-heading {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .aside-heading::after{
+    content: "";
+    width: 65px;
+    height: 3px;
+    background-color: #e1d9bd;
+  
+    display: block;
+    margin-top: 14px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .aside-post-img {
+    width: 70px;
+    margin-right: 18px;
+  }
+  
+  .aside-article { 
+    display: flex;
+    margin-top: 28px;
+  }
+  
+  .aside-post-time {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 0;
+  }
+  
+  .aside-post-text-link {
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1.3;
+    color: black;
+    margin-top: 9px;
+  }
+  
+  .aside-post-text-link:hover {
+    color: #6e61ff;
+  }
+  
+  .aside-search {
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .aside-search-label {
+    width: 275px;
+  }
+  
+  .aside-search-input {
+    height: 48px;
+    width: 100%;
+    padding: 18px;
+    background-color: #f4f7f6;
+    outline: none;
+    border: none;
+    border: solid 1px #f2f2f2;
+  }
+  
+  .search-button {
+    width: 48px;
+    height: 48px;
+    background-color: #b59f5b;
+  
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/search.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: center center;
+  
+    outline: none;
+    border: solid 1px #f2f2f2;
+    cursor: pointer;
+  }
+  
+  .hidden-span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  
+  .aside-mailing {
+    margin-top: 23px;
+  }
+  
+  .aside-mailing-input {
+    width: 100%;
+    height: 48px;
+    padding: 18px;
+  
+    background-color: #f4f7f6;
+    outline: none;
+    border: none;
+    border: solid 1px #f2f2f2;
+  }
+  
+  .aside-mailing-button {
+    width: 100%;
+    height: 48px;
+    margin-top: 18px;
+    margin-bottom: 60px;
+  
+    background-color: #b59f5b;
+    outline: none;
+    border: solid 1px #f2f2f2;
+    cursor: pointer;
+  
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .aside-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top: 24px;
+    margin-bottom: 60px;
+  }
+  
+  .aside-tags-list-items{
+    margin-right: 5px;
+    margin-bottom: 6px;
+  }
+  
+  .aside-tags-list-link {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+  
+    display: block;
+    border: 3px solid #ededed;
+    padding: 4px 13px;
+  }
+  
+  .aside-tags-list-link:hover {
+    color: #6e61ff;
+  }
+  
+  .aside-themes-list{
+    list-style: none;
+  }
+  
+  .aside-themes-list-items {
+    margin-top: 17px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 12px;
+  }
+  
+  .aside-themes-list-items:first-child {
+    margin-top: 26px;
+  }
+  
+  .aside-themes-list-links {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+  
+    text-decoration: none;
+  }
+  
+  .aside-themes-list-links:hover {
+    color: #6e61ff;
+  }
+  
+  .aside-themes-list-sup {
+    vertical-align: super;
+    font-size: 12px;
+    color: #b59f5b;
+    margin-left: 5px;
+  }
+  
+  /* =============== FOOTER ==============*/
+  .footer-container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    margin-top: 65px;
+  }
+  
+  .footer-nav {
+    display: block;
+    padding: 30px 0;
+    background-color: #f4f7f6;
+  }
+  
+  .footer-nav-list {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-nav-list-items {
+    display: block;
+    margin-right: 25px;
+  }
+  
+  .footer-nav-list-items:last-child{
+    margin-right: 0;
+  }
+  
+  .footer-nav-list-link-icon{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+  }
+  
+  .footer-nav-list-link-twitter {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg);
+  }
+  
+  .footer-nav-list-link-pinterest {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg);
+  }
+  
+  .footer-nav-list-link-facebook {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg);
+  }
+  
+  .footer-nav-list-link-instagram {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg);
+  }
+  
+  .footer-nav-list-link-tumblr {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg);
+  }
+  
+  .copyrights {
+    font-size: 12px;
+    color: #999999;
+    display: block;
+    text-decoration: none;
+  
+    margin-top: 74px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  /* =============== THE_END ==============*/
