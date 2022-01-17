@@ -125,6 +125,10 @@ body {
     border-bottom: 3px solid #e1d9bd;
   }
 
+  .trend-container {
+    background-image: url("..\images\trend1.jpg")
+  }
+
 /* =============== MAIN ==============*/
 .main {
   width: 780px;
