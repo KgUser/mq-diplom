@@ -111,22 +111,38 @@ body {
   padding: 0 15px;
 }
 
-.trends {
+.trends-container {
   display: flex;
-  }
+  flex-wrap: wrap;
+  width: 100%;
+   }
 
   .trends-header {
     margin: auto;
     margin-top: 65px;
     text-transform: uppercase;
+
   }
 
   .trends-header::after {
     border-bottom: 3px solid #e1d9bd;
   }
 
+  .trands {
+    display: flex;
+  }
+
   .trend-container-garden {
     background-image: url("../images/trend1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    width: 410px;
+  }
+
+  .trend-container-filling {
+
   }
 
 /* =============== MAIN ==============*/
