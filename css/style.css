@@ -6,14 +6,14 @@
 }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open-Sans-normal";
   src: url('../fonts/OpenSans-Regular.woff');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open-Sans-bold";
   src: url('../fonts/OpenSans-Bold.woff');
   font-style: bold;
   font-weight: 700;
@@ -118,18 +118,33 @@ body {
    }
 
   .trends-header {
-    margin: auto;
     margin-top: 65px;
     text-transform: uppercase;
-
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .trends-header::after {
     border-bottom: 3px solid #e1d9bd;
   }
 
-  .trands {
+  .trends {
     display: flex;
+    width: 100%;
+    position: relative;
+  }
+
+  .trends::after {
+    content: "";
+    background-color: #000000;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.6;
+    z-index: 1;
   }
 
   .trend-container-garden {
@@ -139,10 +154,39 @@ body {
     background-size: cover;
 
     width: 410px;
+    z-index: 0;
   }
 
-  .trend-container-filling {
 
+  .trend-container-filling {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 157px 25px 15px;
+    border: 3px solid #807539;
+    z-index: 2;
+  }
+
+  .trend-filling-list {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  .trend-filling-list-item {
+    list-style-type: none;
+  }
+
+  .trend-filling-list-item-link {
+    font-size: 14px;
+    color: #b59f5b;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+
+  .trend-filling-span {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 15px;
   }
 
 /* =============== MAIN ==============*/
