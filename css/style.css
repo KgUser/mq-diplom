@@ -115,12 +115,15 @@ body {
 .trends {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .trend-tittle {
   font-size: 20px;
   margin: auto;
   margin-top: 65px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .trend-tittle::after {
@@ -155,40 +158,40 @@ body {
 
 .trend-group {
   width: 410px;
+  height: 320px;
+  vertical-align: bottom;
 }
 
 .trend-garden {
   background-image: url("../images/trend1.jpg");
 }
 
-.garden-info {
-  padding: 40px 40px 35px 35px;
-  margin: 160px 20px 15px 20px;
-
+.trend-info {
   position: relative;
   z-index: 2;
 
   border: 3px solid #817741;
+  padding: 30px;
 }
 
-.garden-list {
+.trend-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.garden-list-item {
+.trend-list-item {
   margin-right: 20px;
   list-style: none;
 }
 
-.garden-list-link {
+.trend-list-link {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
   color: #b59f5b;
 }
 
-.garden-span {
+.trend-span {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
